@@ -70,7 +70,7 @@ def checkout(cart, coupons)
 
   cart_with_coupons_clearance_applied.each do |food, info|
     binding.pry
-    cart_total += info[:price]
+    cart_total += info[:price] * info[:count]
   end
   cart_total
 end
